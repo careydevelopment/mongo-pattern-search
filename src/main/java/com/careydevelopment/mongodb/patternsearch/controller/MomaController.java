@@ -41,17 +41,17 @@ public class MomaController {
 	}
 	
 	
-    private int getPage(String pageNum) {
-    	int page = 0;
+	private int getPage(String pageNum) {
+		int page = 0;
     	
-    	if (pageNum != null) {
-    		try {
-    			page = new Integer(pageNum);
-    		} catch (NumberFormatException ne) {
-    			logger.error("Page number isn't a number! " +pageNum);
-    		}
-    	}
+		if (pageNum != null) {
+			try {
+				page = new Integer(pageNum);
+			} catch (NumberFormatException ne) {
+				logger.error("Page number isn't a number! " +pageNum);
+			}
+		}
     	
-    	return page;
+		return page;
     }
 }

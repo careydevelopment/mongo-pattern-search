@@ -12,6 +12,6 @@ public interface MomaRepository extends MongoRepository<MomaWork,String> {
 	@Query("{}")
 	Page<MomaWork> findMomaWorks(Pageable page);
 	
-	@Query("{'title':{'$regex':'?0',$options:'i'}}") 
+	@Query("{'title':{'$regex':'?0','$options':'i'}}") 	
 	Page<MomaWork> searchByTitle(String name, Pageable page);
 }

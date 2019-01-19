@@ -1,8 +1,5 @@
 package com.careydevelopment.mongodb.patternsearch.controller;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +25,7 @@ public class MomaController {
 	private MomaRepository momaRepository;
 	
 	
-	@GetMapping("/moma/filter")
+	@GetMapping("/moma/artworks")
 	public Page<MomaWork> search(@RequestParam(value="match", required=true) String match,
 			@RequestParam(value="pageNum", required=false) String pageNum) {
 		
@@ -53,5 +50,5 @@ public class MomaController {
 		}
     	
 		return page;
-    }
+	}
 }
